@@ -70,8 +70,10 @@ class Calculator {
         let returnDeposit = this.deposit.firstAmount;
         for (let i = 0; i < this.deposit.period; i++) {
             returnDeposit *= (1 + (bankProduct.incomeType / (100 * 12)));
+            if(i != this.deposit.period - 1) {
+                returnDeposit += Number(this.deposit.mounthlyAmount);
+            }
         }
-
         return returnDeposit;
     }
 
@@ -112,17 +114,15 @@ class Application {
     drawTable(resultArray, calc) {
         const container = document.getElementById('table-div');
         if (resultArray.length == 0) {
-            container.innerHTML = '';
             document.getElementById('alert-div').style.display = 'block';
 
         } else {
-            container.innerHTML = '';
             document.getElementById('alert-div').style.display = 'none';
 
             let arr = [];
             arr[0] = '<tr><th>Название банка</th><th>Вклад</th><th>Процент</th><th>Итоговая сумма</th>';
             for (let i = 0; i < resultArray.length; i++) {
-                arr.push(`<tr><td>${resultArray[i].bankName}</td><td>${resultArray[i].investName}</td><td>${resultArray[i].incomeType}</td><td>${calc.sumDeposit(resultArray[i]).toFixed(2)}</td>`);
+                arr.push(`<tr><td>${resultArray[i].bankName}</td><td>${resultArray[i].investName}</td><td>${resultArray[i].incomeType}</td><td>${Math.round(calc.sumDeposit(resultArray[i]))}</td></tr>`);
             }
 
             container.innerHTML = `<table>${arr}</table>`;
