@@ -103,10 +103,10 @@ table {
   }
   
   table tr:nth-child(even){
-      background-color: #f2f2f2;
+      background-color: #d1cccc;
     }
   
-  table tr:hover {background-color: #ddd;}
+  table tr:hover {background-color: rgb(255, 255, 255);}
   
   table th {
     padding-top: 5px;
