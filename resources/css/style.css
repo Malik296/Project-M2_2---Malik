@@ -1,7 +1,9 @@
 body {
     font-family: Roboto, sans-serif;
-    display: flex;
-    justify-content: center;
+}
+
+header {
+    background-color: #222831;
 }
 
 * {
@@ -9,7 +11,8 @@ body {
 }
 
 main {
-    max-width: 900px;
+    width: 600px;
+    margin: 0 auto;
 }
 
 h2 {
@@ -25,7 +28,6 @@ h2 {
 }
 
 label {
-    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -65,7 +67,7 @@ label {
 table {
     border-collapse: collapse;
     width: 100%;
-    min-width: 800px;
+    border: 1px solid;
 }
 
 table tr {
@@ -73,7 +75,7 @@ table tr {
 }
 
 
-table tr:hover {
+table tr:hover td{
     background: #9e9b9b;
 }
 
@@ -83,11 +85,11 @@ tr:nth-child(even) {
 
 table th {
     background: #51d895;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
 table td {
-    padding: 4px;
+    padding: 8px;
     text-align: center;
 }

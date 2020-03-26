@@ -114,8 +114,8 @@ class Application {
     drawTable(resultArray, calc) {
         const container = document.getElementById('table-div');
         if (resultArray.length == 0) {
+            container.innerHTML = '';
             document.getElementById('alert-div').style.display = 'block';
-
         } else {
             document.getElementById('alert-div').style.display = 'none';
 
