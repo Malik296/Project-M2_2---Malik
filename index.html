@@ -11,6 +11,9 @@
 
 <body>
     <header>
+        <div class="img-div">
+            <img src="https://www.pashabank.ge/m/i/downloads/logo-en-horizontal.png" alt="Pasha Bank Logo">
+        </div>
     </header>
 
     <main>
@@ -30,7 +33,12 @@
             </div>
             <div class="row-div">
                 <label for="type-Currency">Вальюта вклада</label>
-                <input type="text" id="type-Currency">
+
+                <select id="type-Currency">
+                    <option value="RUB">RUB</option>
+                    <option value="USD">USD</option>
+                </select>
+
             </div>
             <button id="action">Подобрать</button>
         </div>

@@ -3,7 +3,7 @@ class Deposit {
         this.firstAmount = firstAmount;
         this.mounthlyAmount = mounthlyAmount;
         this.period = period;
-        this.typeCurrency = typeCurrency.toUpperCase();
+        this.typeCurrency = typeCurrency;
     }
 
     checkFunction() {
@@ -15,9 +15,6 @@ class Deposit {
             return false;
         } else if (this.period < 0) {
             alert('Не корректный срок вклада!');
-            return false;
-        } else if (this.typeCurrency != 'RUB' && this.typeCurrency != 'USD') {
-            alert('Не корректный тип валюты!');
             return false;
         } else {
             return true;
@@ -131,6 +128,8 @@ class Application {
 }
 
 let start = new Application();
+
+
 let res = [{ "bankName": "Газпромбанк", "investName": "Ваш успех", "currency": "RUB", "incomeType": 6.22, "sumMin": 50000, "sumMax": null, "termMin": 12, "termMax": 12, "canDeposit": false },
 { "bankName": "Кредит Европа Банк", "investName": "Оптимальный на 2 года", "currency": "RUB", "incomeType": 6.45, "sumMin": 100000, "sumMax": null, "termMin": 24, "termMax": 24, "canDeposit": false },
 { "bankName": "Банк Зенит", "investName": "Праздничный 500+", "currency": "RUB", "incomeType": 6, "sumMin": 30000, "sumMax": null, "termMin": 17, "termMax": 17, "canDeposit": false },

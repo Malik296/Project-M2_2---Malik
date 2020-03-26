@@ -1,9 +1,21 @@
 body {
     font-family: Roboto, sans-serif;
+    background-color: #393e46;
 }
 
 header {
-    background-color: #222831;
+    background-color: #142850;
+    padding: 5px;
+    height: 75px;
+}
+
+.img-div {
+    float: right;
+    display: inline-block;
+}
+
+img {
+    width: 240px;
 }
 
 * {
@@ -11,17 +23,20 @@ header {
 }
 
 main {
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
+    /* border: 1px solid; */
 }
 
 h2 {
     text-align: center;
+    color: #eeeeee;
 }
 
 .calculate-div {
     width: 500px;
     border: 1px solid #008B8B;
+    background: whitesmoke;
     margin: 0 auto;
     border-radius: 5px;
     padding: 15px;
@@ -55,41 +70,47 @@ label {
 
 #alert-div {
     display: none;
+    width: 500px;
     background-color: rgb(155, 87, 87);
     color: white;
     padding: 5px;
-    border-radius: 2px;
-    margin-top: 5px;
+    border-radius: 3px;
+    margin: 5px auto;
+    
+}
+select {
+    width: 160.5px;
+    padding: 3px;
 }
 
 /* //---------------------------------------------------- */
 
 table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid;
-}
-
-table tr {
-    border-bottom: 1px solid;
-}
-
-
-table tr:hover td{
-    background: #9e9b9b;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-table th {
-    background: #51d895;
-    padding: 5px;
     text-align: center;
-}
+  }
 
-table td {
-    padding: 8px;
-    text-align: center;
-}
+  table td {
+      background: whitesmoke;
+  }
+  
+  table td, table th {
+    width: 25%;
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  
+  table tr:nth-child(even){
+      background-color: #f2f2f2;
+    }
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #00adb5;
+    color: white;
+  }
