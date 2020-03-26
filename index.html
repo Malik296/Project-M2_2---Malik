@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <h2>Подбор оптимального вклада</h2>
+        <div class="main-div">
+            <div class="calculate-div">
+                <div class="row-div">
+                    <label for="start-amount"><p>Начальная сумма</p></label>
+                    <input type="number" id="start-amount">
+                </div>
+                <div class="row-div">
+                    <label for="mounthly-amount"><p>Сумма ежемесячного пополнения</p></label>
+                    <input type="number" id="mounthly-amount">
+                </div>
+                <div class="row-div">
+                    <label for="period"><p>Срок вклада</p></label>
+                    <input type="number" id="period">
+                </div>
+                <div class="row-div">
+                    <label for="type-Currency"><p>Вальюта вклада</p></label>
+                    <input type="text" id="type-Currency">
+                </div>
+                <button id="action">Подобрать</button>
+            </div>
+        </div>
+        
+        <div id="table-div"></div>
+        <div id="alert-div"><h3>Нет подходящих вариантов</h3></div>
+    </main>
+    <footer></footer>
+
+    <script src="resources/js/script.js"></script>
+</body>
+</html>
